@@ -4,7 +4,7 @@ A simple demo for using neo4j in play with Neo4j OGM
 Assume that you have already installed SBT in your machine. (and a workable Neo4j server, of course).
 
 1. Start you Neo4j server
-2. Configure the Neo4j endpoint and password in demo-for-play-and-neo4j/app/controllers/HomeController.java, line 23-25
+2. Configure the Neo4j endpoint and password in app/controllers/HomeController.java, line 23-25
 3. sbt run
 
 There are two APIs:
