@@ -10,6 +10,9 @@ import org.neo4j.ogm.session.SessionFactory;
 import org.neo4j.ogm.transaction.Transaction;
 import play.mvc.*;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * This controller contains an action to handle HTTP requests
  * to the application's home page.
@@ -60,8 +63,7 @@ public class HomeController extends Controller {
 
         Filter filter = new Filter ("title", ComparisonOperator.EQUALS, movieName);
         Movie movie = session.loadAll(Movie.class, filter).iterator().next();
-        String result = "";
-        for (Actor actor : movie.getActors()) result += actor.getName() + "\n";
-        return ok(result);
+        List<Actor> results = new ArrayList<>(movie.getActors());
+        return ok(views.html.actors.render(results));
     }
 }

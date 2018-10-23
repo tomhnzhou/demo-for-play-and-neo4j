@@ -1,0 +1,23 @@
+@(actorLsit: List[model.Actor])
+
+@main("Actors") {
+    <div class="container">
+        <h2>Actors</h2>
+        <table class="table table-hover table-bordered table-condensed" id ="myTable">
+            <thead>
+                <tr class="d-flex">
+                    <th class="col-md-6">Name</th>
+                    <th class="col-md-6">Id</th>
+                </tr>
+            </thead>
+            <tbody id="tbody">
+            @for(user <- actorLsit){
+                <tr class="d-flex">
+                    <td class="col-md-6">@user.getName()</td>
+                    <td class="col-md-6">@user.getId()</td>
+                </tr>
+            }
+            </tbody>
+        </table>
+    </div>
+}
