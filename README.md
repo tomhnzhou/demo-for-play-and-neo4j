@@ -8,10 +8,10 @@ Assume that you have already installed SBT in your machine. (and a workable Neo4
 3. sbt run
 
 There are two APIs:
-1. localhost:9000/initialize
-by doing this, all the original data in Neo4j will be removed, and example data: two actors and one movie, will be inserted.
+1. localhost:9000/initialize  
+by doing this,  **all the original data in Neo4j will be removed**, and example data: two actors and one movie, will be inserted.
 
-2. localhost:9000/getActorsIn/<MovieName>
+2. localhost:9000/getActorsIn/<MovieName>  
 you will get a table of all the actors in that movie in your database.
 
 Hope this can help!
